@@ -65,7 +65,7 @@ lost by phase, and wickets taken by phase.
 Highlights leading batters by strike rate and runs, alongside leading
 bowlers by wickets.
 
-![MI Player Performance Analysis](powerbi/screenshots/MI%20Player%20Performance%20Analysis.png)
+![MI Player Performance Analysis](powerbi/screenshots/MI%20Player%20Performance%20Analysis%20.png)
 
 *If a screenshot does not display, verify its exact filename in the
 `powerbi/screenshots/` folder and update the corresponding image path.*
