@@ -6,6 +6,8 @@ An end-to-end Data Analytics project analyzing Mumbai Indians' IPL 2026 performa
 
 The project investigates batting, bowling, player contribution, match phases, opponent performance, and match situations to identify the key factors influencing MI's results.
 
+The project demonstrates the application of SQL, Python, Excel, and Power BI to sports performance analysis and business intelligence.
+
 ## 🎯 Business Question
 
 > What factors are influencing Mumbai Indians' performance in IPL 2026?
@@ -25,32 +27,44 @@ The analysis focuses on:
 ## 🛠️ Tools & Technologies
 
 ### SQL — PostgreSQL
-Used for data exploration, aggregation, player/team analysis, CTEs, window functions, ranking, and performance analysis.
+
+Used for data exploration, aggregation, player and team analysis, Common Table Expressions (CTEs), window functions, ranking, and performance analysis.
 
 ### Python — Pandas
-Used for data cleaning, exploratory data analysis, performance analysis, and visualization.
+
+Used for data inspection, cleaning, exploratory data analysis, performance analysis, and visualization.
+
+### Microsoft Excel
+
+Used for spreadsheet-based analysis, calculations, performance summaries, and reporting.
 
 ### Power BI
-Used to build an interactive dashboard for KPI tracking, player analysis, batting and bowling performance, match-phase analysis, and data storytelling.
+
+Used to develop an interactive dashboard for KPI tracking, player analysis, batting and bowling performance, match-phase analysis, and data storytelling.
 
 ## 📂 Dataset
 
 The project uses IPL 2026 match-level and ball-by-ball data.
 
-Core datasets:
+Core datasets include:
 
-- `matches.csv` — match results, teams, toss, scores and venues
-- `deliveries.csv` — ball-by-ball batting, bowling, runs and wicket data
-- `batting_stats.csv` — batting statistics
-- `bowling_stats.csv` — bowling statistics
-- `fielding_stats.csv` — fielding statistics
-- `squads.csv` — team and player information
-- `venues.csv` — venue information
-- `points_table.csv` — team standings
+| Dataset | Description |
+|---|---|
+| `matches.csv` | Match results, teams, toss information, scores, and venues |
+| `deliveries.csv` | Ball-by-ball batting, bowling, runs, and wicket information |
+| `batting_stats.csv` | Batting statistics |
+| `bowling_stats.csv` | Bowling statistics |
+| `fielding_stats.csv` | Fielding statistics |
+| `squads.csv` | Team and player information |
+| `venues.csv` | Venue information |
+| `points_table.csv` | Team standings |
+
+The datasets used by individual tools may differ depending on the analysis performed.
 
 ## 🔍 Analysis Areas
 
-### Team Performance
+### 1. Team Performance
+
 - Matches played
 - Wins and losses
 - Win percentage
@@ -58,45 +72,58 @@ Core datasets:
 - Opponent-wise performance
 - Venue-wise performance
 
-### Batting Performance
+### 2. Batting Performance
+
 - Total runs
 - Top run scorers
 - Strike rate
 - Fours and sixes
-- Player contribution
+- Individual player contribution
+- Batting performance across matches
 
-### Bowling Performance
+### 3. Bowling Performance
+
 - Total wickets
 - Top wicket-takers
 - Runs conceded
 - Economy rate
 - Bowler contribution
+- Bowling performance across matches
 
-### Match Phase Analysis
-- Powerplay: Overs 1–6
-- Middle overs: Overs 7–16
-- Death overs: Overs 17–20
+### 4. Match Phase Analysis
 
-### Match Situation Analysis
+Performance is examined across three phases:
+
+- **Powerplay:** Overs 1–6
+- **Middle overs:** Overs 7–16
+- **Death overs:** Overs 17–20
+
+The analysis investigates scoring patterns, wicket-taking performance, and run-concession trends across these phases.
+
+### 5. Match Situation Analysis
+
 - Batting first vs chasing
 - Toss impact
 - Close matches
-- Opponent performance
-- League comparison
+- Opponent-wise performance
+- Venue-wise trends
+- Comparison with other teams
 
 ## 📊 Project Workflow
 
 ```text
 Raw IPL Data
       ↓
-Data Understanding & Cleaning
+Data Understanding and Cleaning
       ↓
-SQL Analysis
+SQL Analysis — PostgreSQL
       ↓
-Python / Pandas EDA
+Python Analysis — Pandas
       ↓
-Performance Metrics
+Excel Analysis
+      ↓
+Performance Metrics and Validation
       ↓
 Power BI Dashboard
       ↓
-Key Insights
+Key Insights and Recommendations
