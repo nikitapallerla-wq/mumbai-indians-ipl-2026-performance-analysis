@@ -1,79 +1,115 @@
 # 🏏 Mumbai Indians IPL 2026 Performance Analysis
 
-An end-to-end Data Analytics project investigating Mumbai Indians'
-IPL 2026 performance using PostgreSQL, Python, Pandas, Microsoft Excel,
-and Power BI.
+An end-to-end Sports Analytics and Business Intelligence project analysing
+Mumbai Indians' performance during IPL 2026 using PostgreSQL, Python,
+Pandas, Microsoft Excel, and Power BI.
 
-The project examines team results, batting and bowling contributions,
+The project explores team results, batting and bowling contributions,
 player performance, match situations, and match phases to investigate
-patterns associated with MI's results.
+performance patterns and identify potential areas for improvement.
 
-## 🎯 Business Question
+## 🎯 Business Objective
 
-**What factors contributed to Mumbai Indians' poor results across the
-IPL 2026 matches analysed, and which areas of performance need improvement?**
+To analyse Mumbai Indians' performance across the matches studied,
+evaluate team and player contributions, and investigate performance
+patterns associated with match outcomes.
 
-The analysis investigates:
+### Key Business Questions
 
-- Team wins, losses, and win percentage
-- Batting performance and player contributions
-- Bowling performance and economy
-- Powerplay, middle-over, and death-over performance
-- Batting first versus chasing
-- Toss decisions and match outcomes
-- Opponent-wise performance
-- Player-level contributions
+- How did Mumbai Indians perform across the matches analysed?
+- Which batters contributed most to the team's run scoring?
+- Which bowlers contributed most to wicket-taking?
+- How did batting and bowling performance vary across match phases?
+- Did outcomes differ between batting first and chasing?
+- What patterns appeared across wins and losses?
+- Which performance areas require further investigation?
 
 ## 🛠️ Tools & Technologies
 
 | Tool | Purpose |
 |---|---|
-| PostgreSQL | Data exploration, aggregation, joins, CTEs, and window functions |
-| Python and Pandas | Data cleaning, exploratory analysis, and performance analysis |
-| Microsoft Excel | Calculations, summaries, and spreadsheet-based reporting |
-| Power BI | Interactive dashboards and performance visualisation |
+| PostgreSQL | Data exploration, filtering, aggregation, joins, CTEs, and window functions |
+| Python | Data analysis and exploratory analysis |
+| Pandas | Data manipulation, cleaning, and analysis |
+| Microsoft Excel | Calculations, summaries, and spreadsheet-based analysis |
+| Power BI | Interactive dashboards, KPI reporting, and data visualisation |
 
 ## 📂 Repository Structure
 
-- `Python/` — Python analysis notebook
-- `Excel/` — Excel analysis workbook
-- `sql/` — SQL analysis files
-- `powerbi/` — Power BI report and dashboard screenshots
+```text
+mumbai-indians-ipl-2026-performance-analysis/
+│
+├── Python/
+│   └── MI_IPL_2026_Analysis.ipynb
+│
+├── Excel/
+│   └── MI_IPL_2026_Analysis.xlsx
+│
+├── sql/
+│   └── SQL analysis files
+│
+├── powerbi/
+│   ├── MI_IPL_2026_Dashboard.pbix
+│   └── screenshots/
+│       ├── MI Performance Analysis - Dashboard.png
+│       ├── MI Match & Phase Performance Analysis.png
+│       └── MI Player Performance Analysis .png
+│
+└── README.md
+```
 
-See the folders above for the corresponding project deliverables.
+The repository contains the analytical files and dashboard deliverables
+used throughout the project.
 
 ## 📊 Power BI Dashboard
 
-The dashboard contains three pages.
+The Power BI report contains three pages covering team performance,
+match and phase performance, and individual player contributions.
 
 ### 1. Team Performance Overview
 
-Examines team KPIs, wins and losses by opponent, batting first versus
-chasing, toss decisions, leading batters and bowlers, and match scores.
+This page provides an overview of team results and key performance indicators.
+
+**Analysis includes:**
+- Matches played, wins, losses, and win percentage
+- Wins and losses by opponent
+- Batting first versus chasing
+- Toss decisions and match outcomes
+- Leading batters and bowlers
+- Team scores across matches
 
 ![MI Team Performance Dashboard](powerbi/screenshots/MI%20Performance%20Analysis%20-%20Dashboard.png)
 
 ### 2. Match and Phase Performance
 
-Examines match scores, batting position, runs by match phase, wickets
-lost by phase, and wickets taken by phase.
+This page examines match-level results and performance across different
+innings phases.
+
+**Analysis includes:**
+- MI scores and opponent scores
+- Results when batting first and chasing
+- Runs scored during the powerplay, middle overs, and death overs
+- Wickets lost across batting phases
+- Wickets taken across bowling phases
 
 ![MI Match and Phase Performance](powerbi/screenshots/MI%20Match%20%26%20Phase%20Performance%20Analysis.png)
 
 ### 3. Player Performance Analysis
 
-Highlights leading batters by strike rate and runs, alongside leading
-bowlers by wickets.
+This page highlights individual contributions from batters and bowlers.
+
+**Analysis includes:**
+- Leading batters by runs scored
+- Leading batters by strike rate
+- Leading bowlers by wickets taken
+- Player-level performance comparisons
 
 ![MI Player Performance Analysis](powerbi/screenshots/MI%20Player%20Performance%20Analysis%20.png)
 
-*If a screenshot does not display, verify its exact filename in the
-`powerbi/screenshots/` folder and update the corresponding image path.*
-
-## 📈 Initial Performance Summary
+## 📈 Key Performance Indicators
 
 The current dashboard reports the following results for the seven
-matches analysed:
+matches analysed.
 
 | KPI | Result |
 |---|---:|
@@ -82,80 +118,122 @@ matches analysed:
 | Losses | 5 |
 | Win percentage | 28.6% |
 
-These figures describe the results represented in the current dashboard.
-They do not, by themselves, establish the reasons for the losses.
+These indicators summarise the team's results within the analysed dataset
+and provide a starting point for investigating performance patterns.
 
-## 🔍 Performance Investigation
+## 🔍 Analytical Approach
 
-The analysis investigates the following questions:
+### 1. Data Exploration and Preparation
+
+- Examined the available match and player data.
+- Prepared the data for analysis using the available tools.
+- Reviewed relevant fields and calculation requirements.
+
+### 2. SQL Analysis
+
+- Used filtering, aggregation, and sorting to investigate match results.
+- Applied joins to combine relevant data.
+- Used Common Table Expressions (CTEs) and window functions for
+  analytical queries.
+- Examined team and player performance patterns.
+
+### 3. Python and Pandas Analysis
+
+- Used Python and Pandas for data manipulation and analysis.
+- Explored batting, bowling, and match-level performance.
+- Investigated patterns in the available data.
+
+### 4. Excel Analysis
+
+- Used spreadsheet calculations and summaries.
+- Analysed relevant team and player performance metrics.
+- Organised findings for reporting.
+
+### 5. Power BI Visualisation
+
+- Developed a multi-page interactive report.
+- Presented team KPIs and match outcomes.
+- Created visualisations for match phases and player contributions.
+- Organised the analysis into a structured dashboard.
+
+## 🔎 Performance Investigation
+
+The project investigates potential performance gaps across four areas.
 
 ### Batting Performance
-- How effectively did MI score runs?
-- Which batters contributed most?
-- How consistent were batting contributions?
+
+- Run-scoring contributions
+- Leading run scorers
+- Batting strike rates
+- Scoring patterns across match phases
 
 ### Bowling Performance
-- How many wickets did MI take?
-- How many runs did MI concede?
-- Which bowlers contributed most to wicket-taking?
+
+- Wickets taken
+- Runs conceded
+- Leading wicket-taking bowlers
+- Bowling contributions across match phases
 
 ### Match Phase Performance
-- How did MI perform in the powerplay?
-- Did scoring and wicket-taking patterns change during the middle overs?
-- How effectively did MI finish innings and bowl during the death overs?
+
+- Powerplay performance
+- Middle-over scoring and wicket patterns
+- Death-over performance
+- Wickets lost and wickets taken across phases
 
 ### Match Situations
-- How did results differ between batting first and chasing?
-- What patterns appeared across wins and losses?
-- Which performance factors warrant further investigation?
 
-Final conclusions should be based on validated results from the existing
-SQL, Python, Excel, and Power BI analyses.
+- Batting first versus chasing
+- Toss decisions and match outcomes
+- Performance patterns across wins and losses
+- Areas requiring further investigation
 
-## 📅 IPL 2025 Comparison
+The objective is to identify patterns supported by the available data
+rather than assume that any single metric explains a match result.
 
-IPL 2025 data is not currently included in this project.
+## ⚠️ Data Scope and Limitations
 
-Therefore, this analysis does not claim to establish how MI's performance
-changed between IPL 2025 and IPL 2026.
-
-A year-over-year comparison can be added when comparable data from both
-seasons becomes available.
+- The current dashboard covers seven Mumbai Indians matches from IPL 2026.
+- Findings should be interpreted within the scope of the matches analysed.
+- KPI values should be checked against the underlying data and
+  calculation definitions.
+- Observed patterns do not necessarily establish causation.
+- Conclusions should be limited to what the analysed data supports.
 
 ## 💡 Skills Demonstrated
 
 - SQL querying and data aggregation
-- PostgreSQL CTEs and window functions
+- PostgreSQL joins, CTEs, and window functions
 - Python and Pandas
-- Exploratory Data Analysis
-- Microsoft Excel
+- Exploratory Data Analysis (EDA)
+- Data cleaning and preparation
+- Microsoft Excel analysis
 - Power BI dashboard development
-- KPI analysis
+- KPI analysis and reporting
 - Data validation
-- Performance analysis
+- Sports analytics
 - Data storytelling
-
-## ⚠️ Data Scope and Limitations
-
-- The current dashboard covers seven MI matches from IPL 2026.
-- The findings should not be treated as a complete-season analysis unless
-  dataset coverage has been verified.
-- IPL 2025 data is not currently available in this project.
-- Different filters, datasets, and calculation definitions may affect
-  results across tools.
-- Observed patterns do not necessarily establish causation.
 
 ## 🚀 Project Outcome
 
-This project demonstrates an analytical workflow combining SQL, Python,
-Excel, and Power BI to investigate cricket performance.
+This project demonstrates an end-to-end analytical workflow combining
+SQL, Python, Excel, and Power BI to investigate cricket performance.
 
-The objective is to evaluate MI's results, identify meaningful patterns
-in batting, bowling, player contributions, and match phases, and present
-the findings through interactive visualisation and analytical reporting.
+The analysis brings together match results, player contributions,
+batting and bowling metrics, and match-phase performance in a structured
+reporting solution.
+
+The project demonstrates how data analysis and visualisation techniques
+can be applied to transform sports data into meaningful performance
+insights and communicate findings through interactive dashboards.
 
 ---
 
-**Project:** Mumbai Indians IPL 2026 Performance Analysis  
-**Tools:** PostgreSQL, Python, Pandas, Microsoft Excel, Power BI  
-**Focus:** Sports Analytics, Data Analysis, and Business Intelligence
+**Project:** Mumbai Indians IPL 2026 Performance Analysis
+
+**Tools:** PostgreSQL, Python, Pandas, Microsoft Excel, Power BI
+
+**Domain:** Sports Analytics
+
+**Focus Areas:** Data Analysis, KPI Reporting, Data Visualisation,
+and Business Intelligence
